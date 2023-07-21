@@ -22,11 +22,28 @@ public class MainActivity extends AppCompatActivity {
         buttonAbrir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(
+               /*Snackbar.make(
                         view,
                         "Botão clicado",
                         Snackbar.LENGTH_LONG
-                ).show();
+                ).setAction("Confirmar", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                buttonAbrir.setText("Botao abrir alterado");
+                            }
+                        }).show();*/
+                Snackbar snackbar = Snackbar.make(
+                        view,
+                        "Botão clicado",
+                        Snackbar.LENGTH_LONG
+                ).setAction("Confirmar", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        buttonAbrir.setText("Botao abrir alterado");
+                    }
+                });
+
+                snackbar.show();
             }
         });
     }
