@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAbrir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /*Snackbar.make(
+               Snackbar.make(
                         view,
                         "Botão clicado",
                         Snackbar.LENGTH_LONG
@@ -35,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View view) {
                                 buttonAbrir.setText("Botao abrir alterado");
                             }
-                        }).show();*/
-                snackbar = Snackbar.make(
+                        }).setActionTextColor(getResources().getColor(com.google.android.material.R.color.design_default_color_secondary))
+                       .show();
+                /*snackbar = Snackbar.make(
                         view,
                         "Botão clicado",
                         Snackbar.LENGTH_LONG
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                snackbar.show();
+                snackbar.show();*/
             }
         });
         /*buttonFechar.setOnClickListener(new View.OnClickListener() {
